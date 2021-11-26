@@ -3,8 +3,8 @@
     {
       "id": "1",
       "nev": "Csodás tájkép",
-      "leiras": "Tükröződő fák egy kis tó partján a Duna mentén.",
-      "ar": 20000,
+      "leiras": "\tTükröződő fák egy kis tó partján a Duna mentén.",
+      "ar": "20000",
       "kep": "kepek/kep_1.jpeg"
     },
     {
@@ -37,10 +37,10 @@
     },
     {
       "id": "6",
-      "nev": "Régi présház",
-      "leiras": "Elhagyott présház Biatorbágy fölött.",
-      "ar": 3000,
-      "kep": "kepek/kep_6.jpeg"
+      "nev": "Új présház",
+      "leiras": "új lett",
+      "ar": "1500",
+      "kep": "kepek/kep_1.jpeg"
     },
     {
       "id": "7",
@@ -48,6 +48,13 @@
       "leiras": "Innnen ugratta Ördög nevű lovát a mélybe Sándor Móricz gróf.",
       "ar": 23000,
       "kep": "kepek/kep_7.jpeg"
+    },
+    {
+      "id": "8",
+      "nev": "Nyakigláb-galibárd",
+      "leiras": "Akkora sziklára másztam fel, hogy el sem tudod képzelni",
+      "ar": "290000",
+      "kep": "kepek/kep_1.jpeg"
     }
   ]
 }

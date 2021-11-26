@@ -16,17 +16,22 @@ $(function () {
     })
     sablonElem.hide() //sablonelem eltávolítása
 
-    $(window).on('termekKosarba', (event) => {
-      //itt hívjuk meg a kosarat és belepakoljuk a kosár tömbbe az
-      //aktuális termék adatait
-      
-      
-      
-      kosar.setKosar(event.detail)
-      console.log(kosar.kosarTomb)
-      console.log(event.detail)
-    })
+    
   }
+  $(window).on('termekKosarba', (event) => {
+    //itt hívjuk meg a kosarat és belepakoljuk a kosár tömbbe az
+    //aktuális termék adatait
+    
+    
+    
+    kosar.setKosar(event.detail)
+    console.log(kosar.kosarTomb)
+    console.log(event.detail)
+    
+  })
+
+
+
   $("#Katt").click(function () {
     let apivegpontuj = "http://localhost:3000/termekek/?q=" + $('form').serializeArray()[0].value;
     $('.termek').html = "";

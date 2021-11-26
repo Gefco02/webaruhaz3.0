@@ -7,22 +7,35 @@ $(function () {
     function termekLista(termekek) {
         const szuloElem = $("table");
         const sablonElem = $(".termek");
-
+        szuloElem.empty();
+        sablonElem.show();
         termekek.forEach(function (elem) {
             let node = sablonElem.clone().appendTo(szuloElem);
             const obj = new TermekAdmin(node, elem);
 
         });
-        sablonElem.remove(); //sablonelem eltávolítása
+        sablonElem.hide(); //sablonelem eltávolítása
     }
     $(window).on("torles", () => {
         console.log(event.detail.id)
         ajaxHivas.deleteAjax(apivegpont, event.detail.id)
         console.log("Töröltem magam!")
+
     });
     $(window).on("modositas", () => {
         console.log("Módosítottam magam!")
+        var adat={
+            id: event.detail.id,
+            nev: $('form').serializeArray()[0].value,
+            leiras:$('form').serializeArray()[1].value,
+            ar:$('form').serializeArray()[2].value,
+            kep: "kepek/kep_1.jpeg"
+        };
+        ajaxHivas.putAjax(apivegpont,adat,event.detail.id)
+
+
     });
+
     $("#Katt").click(function () {
         console.log($('form').serializeArray()[0].value)
         id++;
@@ -34,6 +47,7 @@ $(function () {
             kep: "kepek/kep_1.jpeg"
         };
         ajaxHivas.postAjax(apivegpont,adat,event.detail.id)
+
     });
 
 });
